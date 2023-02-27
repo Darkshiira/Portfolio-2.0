@@ -18,46 +18,77 @@ const Wrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    img {
+        ;
+    }
     `
 
 const Card1 = styled.div`
     width: 1000px;
-    background: linear-gradient(172deg, rgba(77,0,77,1) 0%, rgba(20,3,24,1) 100%);
-    padding: 20px;
+    background: #84321f;
     color: #F0F8FF;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
+
+    `
+
+    const TopCard = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    background-color:#6B2919; 
+    `
+
+const Card2 = styled.div`
+    background:#84321f;
+    width: 500px;
+    height: 500px;
+    color: #F0F8FF;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
     `
-const Card2 = styled.div`
-    background:linear-gradient(172deg, rgba(77,0,77,1) 0%, rgba(20,3,24,1) 100%);
-    width: 500px;
-    height: 500px;
-    padding: 20px;
-    color: #F0F8FF;
+
+const Card2div = styled.div`
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin: 20px;
+    `
+
+    const Image = styled.img`
+    border: 6px inset #6B2919;
     border-radius: 10px;
-    box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
     `
 
 const Portfolio = () => {
   return (
     <OuterWrapper>
         <Wrapper>
-            <Card1><a href="https://github.com/Darkshiira/Calculator"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a><h2>Some useful apps:</h2><a href="https://darkshiira.github.io/Calculator/"><img height="400px" width="800px" alt="bunch of programs that I made" src= {Calc}></img></a></Card1>
-            <Card2><a href="https://github.com/Darkshiira/Examinationsuppgift---Frontend2---HTML-CSS"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a><h2>Project we had in HTML/CSS class:</h2><img height="200px" width="500px" alt="First project I made" src= {Project1}></img></Card2>
+            <Card1><TopCard><a href="https://github.com/Darkshiira/Calculator"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a></TopCard>
+
+                <h2>Some useful apps:</h2><a href="https://darkshiira.github.io/Calculator/"><Image height="400px" width="800px" alt="bunch of programs that I made" src= {Calc}></Image></a></Card1>
+            <Card2><TopCard><a href="https://github.com/Darkshiira/Examinationsuppgift---Frontend2---HTML-CSS"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a></TopCard><Card2div><h2>Project we had in HTML/CSS class:</h2><Image height="200px" width="400px" alt="First project I made" src= {Project1}></Image></Card2div></Card2>
         </Wrapper>
         <Wrapper>
-            <Card2><a href="https://github.com/Darkshiira/Portfolio"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a><h2>My old Portfolio:</h2><a href="https://darkshiira.github.io/Portfolio/"><img height="200px" width="500px" alt="My old Portfolio" src= {OldPor}></img></a></Card2>
-            <Card1><a href="https://github.com/Darkshiira/examinationsuppgift-react"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a><h2>Project we had in React- class:</h2><img height="400px" width="800px" alt="Project from react-class" src= {Reactpro}></img></Card1>
+            <Card2><TopCard><a href="https://github.com/Darkshiira/Portfolio"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a></TopCard><Card2div><h2>My old Portfolio:</h2><a href="https://darkshiira.github.io/Portfolio/"><Image height="200px" width="400px" alt="My old Portfolio" src= {OldPor}></Image></a></Card2div></Card2>
+            <Card1><TopCard><a href="https://github.com/Darkshiira/examinationsuppgift-react"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a></TopCard><h2>Project we had in React- class:</h2><Image height="400px" width="700px" alt="Project from react-class" src= {Reactpro}></Image></Card1>
         </Wrapper>
     </OuterWrapper>
   )

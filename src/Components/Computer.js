@@ -3,9 +3,34 @@ import styled from 'styled-components'
 import Screen from './Screen'
 import { useState } from 'react'
 import img from '../Media/power-on.png'
+import bookshelf1 from '../Media/bookshelf1.png'
+import bookshelf2 from '../Media/bokkshelf2.png'
+
+const Image = styled.img`
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 300px;
+
+`
+
+const Image2 = styled.img`
+    position: absolute;
+    top: 250px;
+    left: -50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 300px;
+
+`
 
 
 const Wrapper = styled.div`
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,6 +47,7 @@ const Computerdiv = styled.div`
     justify-content: center;
     align-items: center;
     background-color: grey;
+    z-index: 1;
 
     img:hover {
         cursor: pointer;
@@ -72,6 +98,8 @@ const Computer = () => {
 
   return (
     <Wrapper>
+        <Image src= {bookshelf1} alt="bookshelf" />
+        <Image2 src= {bookshelf2} alt="bookshelf" />
         <Computerdiv>
             <Screendiv>
             {animation ? <Screen/> : null}
