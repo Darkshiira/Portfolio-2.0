@@ -6,12 +6,21 @@ const Foot = styled.div`
     padding-top: 50px;
     background-color: #84321f;
     color: #F0F8FF;
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 1400px) {
+        flex-direction: column;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
     `
 const Attributefront = styled.div`
     background:lightyellow;
@@ -31,6 +40,10 @@ const Attributefront = styled.div`
         background:#00192A;
         cursor: pointer;
     }
+
+    @media (max-width: 768px) {
+        width:  90%;
+    }
     `
 const Attribute = styled.div`
     color: #F0F8FF;
@@ -41,6 +54,7 @@ const Attribute = styled.div`
     border-radius: 10px;
     padding: 10px;
     display: flex;
+    margin: 10px;
     flex-direction: column;
     justify-content: end;
     align-items: end;
@@ -53,6 +67,9 @@ const Attribute = styled.div`
     a:hover {
         color: #F0F;
     }
+
+    @media (max-width: 768px) {
+        width: 90%;
     `
 
 

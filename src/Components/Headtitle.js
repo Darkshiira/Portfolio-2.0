@@ -8,32 +8,46 @@ import database from '../Media/database.png'
 const OutsideWrapper = styled.div`
     background: #84321f;
     color: #F0F8FF;
-    width: 100vw;
+    width: 100%;
     height: 50vh;
     display: flex;
     flex-direction: row;
+    
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 1400px) {
+
+        height: 100vh;
+    }
+
     `
 
 
 const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    width: 90%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        }
     `
 
 const Card = styled.div`
     background:lightyellow ;
     color: #00192A;
-    width: 200px;
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 20px;
+    padding: 20px;
     border-radius: 10px;
     border: 2px solid yellow;
     box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
@@ -48,6 +62,31 @@ const Card = styled.div`
     img {
         width: 100px;
         height: 100px;
+    }
+
+    @media (max-width: 1400px) {
+
+        height: 200px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 2px;
+        width: 90%;
+        height: 100px;
+
+        h1{
+            font-size: 1rem;
+        }
+
+        h3{
+            font-size: 0.5rem;
+            
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
         }`
 
 const Headtitle = () => {

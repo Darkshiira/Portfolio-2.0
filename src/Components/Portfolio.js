@@ -12,16 +12,27 @@ const OuterWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+
+    @media (max-width: 1900px) {
+        height: 350vh;
+    }
+
     `
 const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap:wrap;
     align-items: center;
+    width: 100%;
+    height: 100%;
 
-    img {
-        ;
+    @media (max-width: 1400px) {
+        height: 100%;
+
     }
+    
     `
 
 const Card1 = styled.div`
@@ -36,7 +47,15 @@ const Card1 = styled.div`
     margin: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
+    
 
+    @media (max-width: 768px) {
+        width: 90%;
+
+        h2 {
+            font-size: 20px;
+        }
+    }
     `
 
     const TopCard = styled.div`
@@ -49,6 +68,10 @@ const Card1 = styled.div`
     width: 100%;
     border-radius: 10px 10px 0px 0px;
     background-color:#6B2919; 
+
+    @media (max-width: 768px) {
+        width 100%;
+    }
     `
 
 const Card2 = styled.div`
@@ -62,6 +85,14 @@ const Card2 = styled.div`
     margin: 20px;
     border-radius: 10px;
     box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
+
+    @media (max-width: 768px) {
+        width: 90%;
+
+        h2 {
+            font-size: 20px;
+        }
+    }
     `
 
 const Card2div = styled.div`
@@ -75,6 +106,16 @@ const Card2div = styled.div`
     const Image = styled.img`
     border: 6px inset #6B2919;
     border-radius: 10px;
+
+    @media (max-width: 1400px) {
+        width: 450px;
+        height: 300px;
+    }
+
+    @media (max-width: 768px) {
+        width: 300px;
+        height: 200px;
+    }
     `
 
 const Portfolio = () => {

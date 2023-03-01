@@ -12,15 +12,23 @@ import Animation from './Animation'
 import Calculator from './Calculator'
 import Memory from './Memory'
 import memorycards from '../Media/photos.png'
+import projec2 from '../Media/Project2.png'
 
+const ScreenWrapper = styled.div`
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+`
 const Wrapper = styled.div`
     position: relative;
-    width: 1000px;
-    height: 470px;
+    width: 100%;
+    height: 95%;
     background: linear-gradient(32deg, rgba(60,58,180,1) 0%, rgba(29,199,253,1) 50%, rgba(69,252,247,1) 100%);
     display: flex;
     flex-direction: column;
-    
+    justify-content: center;
     img {
         padding: 10px;
     }`
@@ -29,7 +37,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 1000px;
+    width: 100%;
     height: 30px;
     background-color: lightblue;
     `
@@ -52,13 +60,18 @@ const Wrapper = styled.div`
     position: absolute;
     top: 30px;
     left: 100px;
-    width: 500px;
-    height: 300px;
+    height: 50%;
     background-color: lightgrey;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: start;
+
+    @media (max-width: 768px) {
+        top: 0;
+        left: 0;
+        width: 100%;
     
     `
 
@@ -72,9 +85,18 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 500px;
-    height: 30px;
+    width: 100%;
+    height: 10%;
     background-color: lightblue;
+    `
+    const FolderContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 90%;
+    background-color: lightgrey;
     `
 
 const Screen = () => {
@@ -143,7 +165,7 @@ const Screen = () => {
   return (
     <>
     {screen ? <Animation /> :
-    <div>
+    <ScreenWrapper>  
     <Wrapper>
         <img onClick={(e)=> openScreen(e)} alt = "Animation"src= {videoimg} width="30px" height="30px"></img>
         <a href="mailto:darkshiira@hotmail.com"><img alt="email" width="30px" height="30px" src= {envelopeimg}></img></a>
@@ -152,7 +174,7 @@ const Screen = () => {
         <img onClick= {(e) => openMemory(e)} alt="memory" width="30px" height="30px" src= {memorycards}></img>
         {folder ? <Documents>
         <Folderbar><span>Downloads</span><button onClick={(e)=> openFolder(e)}>X</button></Folderbar>
-        <div>  
+        <FolderContainer>  
             <Card>
             <a href={oldportfolio} download="Oldportfolio.png"><img alt="old portfolio" width="120px" height="60px" src={oldportfolio}></img></a>
             <span>Old Portfolio.png</span>
@@ -161,7 +183,12 @@ const Screen = () => {
             <a href={Reactpro} download="Reactproject.png"><img alt="Project I did for React" width="120px" height="60px" src={Reactpro}></img></a>
             <span>Reactproject.png</span>
             </Card>
-        </div></Documents>  :null}
+            <Card>
+            <a href={projec2} download="Project2.png"><img alt="Lookalike instagram" width="120px" height="60px" src={projec2}></img></a>
+            <span>Project2.png</span>
+            </Card>
+
+        </FolderContainer></Documents>  :null}
         {calculator ? <Calculator/> : null}
         {memory ? <Memory /> : null}
 
@@ -180,8 +207,9 @@ const Screen = () => {
      : <img onClick = {(e) => openMenu(e)} alt="a window" src= {windowimg} width="30px" height="30px"></img>}
         <div>{time}</div>
     </Bar>
-    </div>
+    </ScreenWrapper>
     }
+    
     </>
   )
 }

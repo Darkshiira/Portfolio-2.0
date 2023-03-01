@@ -8,8 +8,18 @@ background-color: #13131a ;
 height: 50px;
 display: flex;
 justify-content: space-between;
+width: 100%;
 
+@media (max-width: 1400px) {
+    height: 100px;
+}
 
+@media (max-width: 768px) {
+    flex-direction: column;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
 `
 const Title = styled.div`
 

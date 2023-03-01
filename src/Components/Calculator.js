@@ -5,13 +5,14 @@ const Calc = styled.div`
     position: absolute;
     top: 0px;
     right: 50px;
-
-    width: 600px;
-    height: 400px;
+    width: 60%;
+    height: 60%;
     background: #00091A;
     color: #F0F8FF;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     border: 2px solid lightblue;
     box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
@@ -23,15 +24,15 @@ const Calc = styled.div`
     }
 
     button {
-        width: 50px;
-        height: 50px;
+        width: 20%;
+        height: 20%;
         background: #F0F8FF;
         color: #00091A;
         
         border: 2px solid lightblue;
         box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
         transition: all 0.5s ease-in-out;
-        margin: 10px;
+        margin: 2px;
         &:hover {
             background: #00192A;
             cursor: pointer;
@@ -41,17 +42,15 @@ const Calc = styled.div`
 `
 const Operatingbox = styled.div`
     width: 90%;
-    height: 100%;
+    height: 50%;
     background:#00091A ;
     color: #00091A;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: space-between;
     border: 2px solid lightblue;
     box-shadow: 5px 5px 28px 9px rgba(0,0,0,0.5);
     transition: all 0.5s ease-in-out;
-    margin: 20px;
 `
 
 const Solutionbox = styled.div`
@@ -74,8 +73,8 @@ const Solutionbox = styled.div`
 `
 
 const NumberSquare = styled.div`
-    width: 100%;
-    height: 100%;
+    width: 98%;
+    height: 98%;
     background: #00091A;
     color: #F0F8FF;
     display: flex;
@@ -83,7 +82,7 @@ const NumberSquare = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 2px;
     &:hover {
         background: #00192A;
         cursor: pointer;
@@ -94,7 +93,7 @@ const Operatorsbox = styled.div`
     background: #00091A;
     color: #F0F8FF;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;

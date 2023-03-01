@@ -6,6 +6,19 @@ import img from '../Media/power-on.png'
 import bookshelf1 from '../Media/bookshelf1.png'
 import bookshelf2 from '../Media/bokkshelf2.png'
 
+
+
+
+const Wrapper = styled.div`
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+`
+
 const Image = styled.img`
     position: absolute;
     top: 50px;
@@ -14,6 +27,15 @@ const Image = styled.img`
     margin-bottom: 50px;
     width: 600px;
     height: 300px;
+
+    @media (max-width: 1400px) {
+        width: 300px;
+        height: 150px;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 
 `
 
@@ -26,22 +48,21 @@ const Image2 = styled.img`
     width: 600px;
     height: 300px;
 
-`
+    @media (max-width: 1400px) {
+        width: 300px;
+        height: 150px;
+    }
 
-
-const Wrapper = styled.div`
-    position: relative;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
 
 const Computerdiv = styled.div`
+    position: relative;
     border : 2px solid black;
-    width: 1100px;
-    height: 600px;
+    width: 60%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -53,11 +74,15 @@ const Computerdiv = styled.div`
         cursor: pointer;
     }
     
+    @media (max-width: 768px) {
+        width: 90%;
+        height: 50%;
 `
 const Screendiv = styled.div`
+    position: relative;
     border : 2px solid black;
-    width: 1000px;
-    height: 500px;
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,17 +92,23 @@ const Screendiv = styled.div`
 `
 const Legdiv = styled.div`
     border : 2px solid black;
-    width: 200px;
-    height: 100px;
+    width: 10%;
+    height: 15%;
     background-color: grey;
     `
 
 const Footdiv = styled.div`
     border : 2px solid black;
-    width: 600px;
+    width: 50%;
     height: 50px;
     background-color: grey;`
 
+const Power = styled.img`
+    z-Index: 2;
+    position: absolute;
+    bottom: 0px;
+    right: 49%;
+    `
 
 
 
@@ -103,8 +134,9 @@ const Computer = () => {
         <Computerdiv>
             <Screendiv>
             {animation ? <Screen/> : null}
+            
             </Screendiv>
-            <img src={img} alt="power the computer" height="40px" width="40px" onClick={(e) => DoTheAnimation(e)}></img>
+            <Power src={img} alt="power the computer" height="40px" width="40px" onClick={(e) => DoTheAnimation(e)}></Power>
         </Computerdiv>
         
         <Legdiv>

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
     padding-top: 150px;
     color: #F0F8FF;
-    width: 100vw;
+    width: 100%;
     height: 20vh;
     display: flex;
     flex-direction: column;
@@ -19,6 +19,15 @@ const Wrapper = styled.div`
     a:hover {
         color: #F0F;
     }
+
+    @media (max-width: 1400px) {
+        height: 100vh;
+    }
+
+    @media (max-width: 768px) {
+       font-size: 8px;
+       height: 100px;
+    }
     `
 
 
@@ -31,7 +40,7 @@ const Contact = () => {
     <h2>
         Contact me!
     </h2>
-      <h2><a href="mailto:darkshiira@hotmail.com">darkshiira@hotmail.com</a></h2>
+      <h2><a href="mailto:Hanna.Arefiardakani@yh.nackademin.se">Hanna.Arefiardakani@yh.nackademin.se</a></h2>
    </Wrapper>
   )
 }

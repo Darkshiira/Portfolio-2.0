@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Button = styled.button`
     position: absolute;
-    top: 200px;
-    right: 450px;
+    top: 48%;
+    right: 40%;
     width: 150px;
     height: 50px;
     background: #F0F8FF;
@@ -22,13 +22,16 @@ const Button = styled.button`
         cursor: pointer;
         color: #F0F8FF;
     }
+
+    @media (max-width: 768px) {
+        left: 40%;
 `
 
 
 const MemoryWrapper = styled.div`
     position: absolute;
-    width: 1000px;
-    height: 470px;
+    width: 100%;
+    height: 100%;
     background: #3B003B;
     color: #F0F8FF;
     display: flex;
@@ -37,9 +40,7 @@ const MemoryWrapper = styled.div`
     justify-content: start;
     align-items: start;
     
-    span {
-        visibility: hidden;
-    }
+    
     `
 
 const Card = styled.div`
@@ -47,8 +48,8 @@ const Card = styled.div`
     border-radius: 10px;
     margin: 10px;
     color: #F0F8FF;
-    width: 150px;
-    height: 150px;
+    width: 14%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -58,6 +59,11 @@ const Card = styled.div`
     &:hover {
         cursor: pointer;
         border: 2px solid #F0F8FF;
+
+        @media (max-width: 768px) {
+            border: none;
+        }
+
     }
 
     span {
@@ -65,15 +71,38 @@ const Card = styled.div`
         font-size: 100px;
         font-weight: bold;
         color: #F0F8FF;
+        visibility: hidden;
+
+        @media (max-width: 768px) {
+            font-size: 60px;
+        }
+  
     }
+    
+
+    
     `
 
 
 const Memory = () => {
-
+    const [size, setSize] = useState(window.innerWidth);
+    const [amountofCards, setAmountofCards] = useState(6);
     const [cards, setCards] = useState([]);
     const [play, setPlay] = useState(false);
 
+    useEffect(() => {
+
+        const updateSize = () => {
+            setSize(window.innerWidth);
+        }
+
+        window.addEventListener('resize', updateSize);
+        if (size < 1410) {
+            setAmountofCards(5);
+        } else {
+            setAmountofCards(6);
+        }
+    }, [size]);
 
     const playMe = (e) => {
         CreateCards();
@@ -82,7 +111,7 @@ const Memory = () => {
 
     const CreateCards = () => {
         let cardArray = [];
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < amountofCards; i++) {
             cardArray.push(<Card key= {i+0.1} onClick={(e)=>FlipCard(e)}><span>{i}</span></Card>)
             cardArray.push(<Card key= {i + 0.2} onClick={(e)=>FlipCard(e)}><span>{i}</span></Card>)
         }
@@ -123,8 +152,7 @@ const Memory = () => {
                 flippedCards[1].style.visibility = "hidden";
 
             let cardsLeft = document.querySelectorAll("span[style='visibility: hidden;']");
-            console.log(cardsLeft)
-                if (cardsLeft.length === 10) {
+                if (cardsLeft.length === 12) {
                     alert("You won!");
                 }
             }
@@ -134,7 +162,6 @@ const Memory = () => {
                     flippedCards[1].style.visibility = "hidden";
                     flippedCards[0].addEventListener("click", FlipCard);
                     flippedCards[0].style.visibility = "hidden";
-                    console.log(flippedCards)
                 }, 1000);
                 
             }
