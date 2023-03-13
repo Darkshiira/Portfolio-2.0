@@ -7,20 +7,20 @@ const Foot = styled.div`
     background-color: #84321f;
     color: #F0F8FF;
     width: 100%;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 
-    @media (max-width: 1400px) {
-        flex-direction: column;
-    }
+    // @media (max-width: 1400px) {
+    //     flex-direction: column;
+    // }
 
-    @media (max-width: 768px) {
-        flex-direction: column;
-    }
+    // @media (max-width: 768px) {
+    //     flex-direction: column;
+    // }
     `
 const Attributefront = styled.div`
     background:lightyellow;
@@ -105,6 +105,7 @@ const Footer = () => {
     <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Ruslan Babkin - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/backend" title="backend icons">Backend icons created by Muhammad Ali - Flaticon</a>
     <a href="https://www.flaticon.com/free-icons/backend" title="backend icons">Backend icons created by Ehtisham Abid - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/rat" title="rat icons">Rat icons created by Icongeek26 - Flaticon</a>
     <a href="https://www.freepik.com/free-vector/three-wooden-bookshelves-with-various-books-flat-set-web-design_12699863.htm#page=2&query=background%20illustrated%20bookshelf&position=8&from_view=search&track=ais">Image by pch.vector - on Freepik</a> 
     </Attribute>}
     </Foot>

@@ -7,12 +7,14 @@ import envelopeimg from '../Media/envelope.png'
 import folderimg from '../Media/folder.png'
 import oldportfolio from '../Media/Oldportfolio.png'
 import Reactpro from '../Media/Reactproject.png'
+import ratcage from '../Media/ratcage.png'
 import { useState, useEffect } from 'react';
 import Animation from './Animation'
 import Calculator from './Calculator'
 import Memory from './Memory'
 import memorycards from '../Media/photos.png'
 import projec2 from '../Media/Project2.png'
+import Game from './Game'
 
 const ScreenWrapper = styled.div`
     position:absolute;
@@ -107,7 +109,8 @@ const Screen = () => {
     const [screen, setScreen] = useState(false);
     const [calculator, setCalculator] = useState(false);
     const [memory, setMemory] = useState(false);
-    
+    const [game, setGame] = useState(false);
+
     useEffect(() => {
         const interval = setInterval(() => {
             setTime(new Date().toLocaleTimeString());
@@ -161,6 +164,15 @@ const Screen = () => {
         }
     }
 
+    const openGame = (e) => {
+        e.preventDefault();
+        if (game) {
+            setGame(false);
+        } else {
+        setGame(true);
+        }
+    }
+
 
   return (
     <>
@@ -172,6 +184,7 @@ const Screen = () => {
         <img onClick={(e) => openFolder(e)} alt="my documents" width="30px" height="30px" src={folderimg}></img>
         <img onClick= {(e) => openCalculator(e)} alt="calculator" width="30px" height="30px" src= {calculatorimg}></img>
         <img onClick= {(e) => openMemory(e)} alt="memory" width="30px" height="30px" src= {memorycards}></img>
+        <img onClick= {(e) => openGame(e)} alt="game" width="30px" height="30px" src= {ratcage}></img>
         {folder ? <Documents>
         <Folderbar><span>Downloads</span><button onClick={(e)=> openFolder(e)}>X</button></Folderbar>
         <FolderContainer>  
@@ -191,6 +204,7 @@ const Screen = () => {
         </FolderContainer></Documents>  :null}
         {calculator ? <Calculator/> : null}
         {memory ? <Memory /> : null}
+        {game ? <Game /> : null}
 
 
         

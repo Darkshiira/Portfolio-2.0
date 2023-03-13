@@ -5,17 +5,32 @@ import githubimg from '../Media/github.png'
 import Project1 from '../Media/Project1.png'
 import OldPor from '../Media/Oldportfolio.png'
 import Reactpro from '../Media/Reactproject.png'
+import Backend from '../Media/Projectbackend.png'
 
 const OuterWrapper = styled.div`
-    height: 200vh;
+    height: 250vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 
+    
+
     @media (max-width: 1900px) {
         height: 350vh;
+    }
+
+    @media (max-width: 1600px) {
+        height: 400vh;
+    }
+
+    @media (max-width: 1200px) {
+        height: 500vh;
+    }
+
+    @media (max-width: 768px) {
+        height: 400vh;
     }
 
     `
@@ -116,6 +131,11 @@ const Card2div = styled.div`
         width: 300px;
         height: 200px;
     }
+
+    @media (max-width: 300px) {
+        width: 200px;
+        height: 150px;
+    }
     `
 
 const Portfolio = () => {
@@ -130,6 +150,15 @@ const Portfolio = () => {
         <Wrapper>
             <Card2><TopCard><a href="https://github.com/Darkshiira/Portfolio"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a></TopCard><Card2div><h2>My old Portfolio:</h2><a href="https://darkshiira.github.io/Portfolio/"><Image height="200px" width="400px" alt="My old Portfolio" src= {OldPor}></Image></a></Card2div></Card2>
             <Card1><TopCard><a href="https://github.com/Darkshiira/examinationsuppgift-react"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a></TopCard><h2>Project we had in React- class:</h2><Image height="400px" width="700px" alt="Project from react-class" src= {Reactpro}></Image></Card1>
+        </Wrapper>
+        <Wrapper>
+            <Card1>
+                <TopCard>
+                    <a href="https://github.com/Darkshiira/Backend---individuell-uppgift"><img height= "30px" width="30px"alt="link to my github"src={githubimg}></img></a>
+                </TopCard>
+                    <h2>Backend project:</h2>
+                    <Image height="400px" width="700px" alt="Project from backend-class" src= {Backend}></Image>
+            </Card1>
         </Wrapper>
     </OuterWrapper>
   )
