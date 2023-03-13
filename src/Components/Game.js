@@ -380,7 +380,7 @@ const Game = () => {
   return (
     <>
     {game ? <Wrapper> 
-        {gameover ? <h1>Did you catch it?</h1> : <div><h3>Try and box in the mouse.</h3> <Giantbox>{boxes}</Giantbox></div>}
+        {gameover ? <h1>Did you catch it?</h1> : <Giantbox>{boxes}</Giantbox>}
     
     
     </Wrapper> : <Wrapper><h1>Screen is too small</h1></Wrapper>}
