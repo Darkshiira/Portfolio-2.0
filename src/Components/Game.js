@@ -22,6 +22,7 @@ const Giantbox = styled.div`
     justify-content: center;
     align-items: center;
     background-color: lightgrey;
+    margin-top: 25px;
 `
 
 const Image = styled.img`
@@ -41,7 +42,23 @@ const Box = styled.div`
     position: relative;
     margin: 0 1px;
 `
+const GameScreen = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 
+    h3 {
+        margin-left: 60px;
+    }
+
+    p {
+        margin-left: 60px;
+    }
+
+    `
 const Game = () => {
     const [gameover, setGameover] = useState(false)
     const [ouch, setOuch] = useState(0)
@@ -380,7 +397,7 @@ const Game = () => {
   return (
     <>
     {game ? <Wrapper> 
-        {gameover ? <h1>Did you catch it?</h1> : <Giantbox>{boxes}</Giantbox>}
+        {gameover ? <h1>Did you catch it?</h1> :<GameScreen><div><h3>Catch the mouse</h3><p>Try and box in the mouse</p></div><Giantbox>{boxes}</Giantbox></GameScreen> }
     
     
     </Wrapper> : <Wrapper><h1>Screen is too small</h1></Wrapper>}

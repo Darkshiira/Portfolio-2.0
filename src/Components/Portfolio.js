@@ -8,31 +8,16 @@ import Reactpro from '../Media/Reactproject.png'
 import Backend from '../Media/Projectbackend.png'
 
 const OuterWrapper = styled.div`
-    height: 250vh;
+    height: 500vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
 
-    
-
-    @media (max-width: 1900px) {
+    @media (max-width: 912px) {
         height: 350vh;
     }
-
-    @media (max-width: 1600px) {
-        height: 400vh;
-    }
-
-    @media (max-width: 1200px) {
-        height: 500vh;
-    }
-
-    @media (max-width: 768px) {
-        height: 400vh;
-    }
-
     `
 const Wrapper = styled.div`
     display: flex;

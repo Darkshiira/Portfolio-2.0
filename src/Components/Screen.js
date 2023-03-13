@@ -217,6 +217,7 @@ const Screen = () => {
         <Folder><span onClick={(e) => openFolder(e)}>Documents</span></Folder>
         <Folder><span onClick={(e) => openCalculator(e)}>Calculator</span></Folder>
         <Folder><span onClick={(e) => openMemory(e)}>Memory</span></Folder>
+        <Folder><span onClick={(e) => openGame(e)}>Game</span></Folder>
      <img onClick = {(e) => openMenu(e)} alt="a window" src= {windowimg} width="30px" height="30px"></img></Windowbar> 
      : <img onClick = {(e) => openMenu(e)} alt="a window" src= {windowimg} width="30px" height="30px"></img>}
         <div>{time}</div>

@@ -41,7 +41,7 @@ const Wrapper = styled.div`
 const Card = styled.div`
     background:lightyellow ;
     color: #00192A;
-    height: 300px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
