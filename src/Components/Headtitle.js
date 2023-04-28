@@ -128,7 +128,7 @@ const Headtitle = () => {
     <OutsideWrapper>
     <Wrapper>
         {flip1 ? <Card onClick={(e) => flipthecard1(e)}><img alt="frontend" src={frontend}/></Card> : <Card onClick={(e) => flipthecard1(e)}><h1>Frontend</h1><h3>HTML</h3><h3>CSS/SCSS</h3><h3>React</h3></Card>}
-        {flip2 ? <Card onClick={(e) => flipthecard2(e)}><img alt="database" src={database}/></Card> : <Card onClick={(e) => flipthecard2(e)}><h1>Database</h1><h3>MySQL</h3></Card>}
+        {flip2 ? <Card onClick={(e) => flipthecard2(e)}><img alt="database" src={database}/></Card> : <Card onClick={(e) => flipthecard2(e)}><h1>Database</h1><h3>MySQL</h3><h3>MongoDB</h3></Card>}
         {flip3 ? <Card onClick={(e) => flipthecard3(e)}><img alt="backend" src={backend}/></Card> : <Card onClick={(e) => flipthecard3(e)}><h1>Backend</h1><h3>Express server</h3></Card>}
     </Wrapper>
     </OutsideWrapper>
