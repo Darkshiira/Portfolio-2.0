@@ -63,7 +63,7 @@ const Game = () => {
     const [gameover, setGameover] = useState(false)
     const [ouch, setOuch] = useState(0)
     const [boxes, setBoxes] = useState([])
-    const[click, setClick] = useState(0)
+    const [click, setClick] = useState(0)
     const [step, setStep] = useState(['up', 'down', 'left', 'right'])
     const [randomnumber, setRandomnumber] = useState([])
     const [size, setSize] = useState(window.innerWidth);
