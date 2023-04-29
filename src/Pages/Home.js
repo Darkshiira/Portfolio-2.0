@@ -1,9 +1,9 @@
 import React from 'react'
 import Headtitle from '../Components/Headtitle'
 import Computer from '../Components/Computer'
-import Portfolio from '../Components/Portfolio'
 import Contact from '../Components/Contact'
 import Footer from '../Components/Footer'
+import Carousel from '../Components/Carousel'
 
 const Home = () => {
   return (
@@ -11,7 +11,8 @@ const Home = () => {
     <Computer />
     <Headtitle />
     <Contact/>
-    <Portfolio />
+    <Carousel />
+    
     <Footer />
     </>
   )
