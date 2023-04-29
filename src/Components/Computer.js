@@ -101,7 +101,8 @@ const Footdiv = styled.div`
     border : 2px solid black;
     width: 50%;
     height: 50px;
-    background-color: grey;`
+    background-color: grey;
+    z-index: 1;`
 
 const Power = styled.img`
     z-Index: 2;
