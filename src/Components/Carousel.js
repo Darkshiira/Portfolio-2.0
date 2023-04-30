@@ -34,6 +34,11 @@ const Border = styled.div`
     height: 100vh;
     background-color: transparent;
     color: #F0F8FF;
+
+    @media (max-width: 1021px) {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        height: 60vh;
     `;
 
 const Carouseldiv = styled.div`
@@ -49,6 +54,15 @@ text-align: center;
   border-radius: 10px;
   background-color: #13131a ;
   color: White;
+
+    @media (max-width: 1021px) {
+        width: 100%;
+        height: 90vh;
+    }
+    @media (max-width: 820px) {
+        width: 100%;
+        height: 100%;
+        
 `;
 
 const Card = styled.div`
@@ -67,6 +81,16 @@ const Card = styled.div`
   .image {
     width: 100%;
     height: 70%;
+    margin-bottom: 20px;
+
+    @media (max-width: 1021px) {
+        width: 80%;
+        height: 50%;
+
+    @media (max-width: 820px) {
+        width: 100%;
+        height: 40%;
+
   }
 `;
 
